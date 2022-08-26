@@ -1,0 +1,24 @@
+#show-read-feeds no
+auto-reload no
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"
+
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key U show-urls
+
+highlight all "#.*#" white magenta
+browser linkhandler
+macro , open-in-browser
+macro 3 set browser "yt-dlp -f 243+251" ; open-in-browser ; set browser linkhandler
+macro 4 set browser "yt-dlp -f 244+251" ; open-in-browser ; set browser linkhandler
+macro 7 set browser "yt-dlp -f 247+251" ; open-in-browser ; set browser linkhandler
+macro 8 set browser "yt-dlp -f 248+251" ; open-in-browser ; set browser linkhandler
+macro v set browser "mpv" ; open-in-browser ; set browser linkhandler
+macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
+macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser linkhandler
+macro p set browser "peertubetorrent %u 480" ; open-in-browser ; set browser linkhandler
+macro P set browser "peertubetorrent %u 1080" ; open-in-browser ; set browser linkhandler
